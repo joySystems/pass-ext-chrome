@@ -12,6 +12,38 @@ function findConfirmationField(passwordField) {
   return null;
 }
 
+// Function to find email/login field
+function findEmailLoginField(form) {
+  if (!form) return null;
+  
+  const emailLoginSelectors = [
+    'input[type="email"]',
+    'input[name*="email"]',
+    'input[name*="login"]',
+    'input[name*="username"]',
+    'input[type="text"]'
+  ];
+
+  for (const selector of emailLoginSelectors) {
+    const field = form.querySelector(selector);
+    if (field && field.value) {
+      return field;
+    }
+  }
+  return null;
+}
+
+// Function to copy text to clipboard
+async function copyToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
+    return false;
+  }
+}
+
 // Function to show notification
 function showNotification(message) {
   const notification = document.createElement('div');
@@ -54,13 +86,32 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         confirmField.dispatchEvent(new Event('input', { bubbles: true }));
       }
 
-      // Listen for form submission
+      // Get domain and email/login information
+      const domain = window.location.hostname;
       const form = passwordField.form;
+      const emailLoginField = findEmailLoginField(form);
+      const emailLogin = emailLoginField ? emailLoginField.value : '';
+
+      // Format the credential information
+      const credentialInfo = [
+        `Domain: ${domain}`,
+        `Password: ${request.password}`,
+        emailLogin ? `Login/Email: ${emailLogin}` : ''
+      ].filter(Boolean).join('\n');
+
+      // Copy credential information to clipboard
+      copyToClipboard(credentialInfo).then(success => {
+        if (success) {
+          showNotification('Credentials copied to clipboard');
+        }
+      });
+
+      // Listen for form submission
       if (form) {
         form.addEventListener('submit', () => {
           chrome.runtime.sendMessage({
             action: 'formSubmitted',
-            domain: window.location.hostname,
+            domain: domain,
             password: request.password
           });
         });
