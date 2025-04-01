@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('lowercase').checked = data.passwordSettings.useLowercase;
       document.getElementById('numbers').checked = data.passwordSettings.useNumbers;
       document.getElementById('special').checked = data.passwordSettings.useSpecial;
-      document.getElementById('email').value = data.passwordSettings.emailNotification;
     }
   });
 });
@@ -19,8 +18,7 @@ document.getElementById('save').addEventListener('click', () => {
     useUppercase: document.getElementById('uppercase').checked,
     useLowercase: document.getElementById('lowercase').checked,
     useNumbers: document.getElementById('numbers').checked,
-    useSpecial: document.getElementById('special').checked,
-    emailNotification: document.getElementById('email').value.trim()
+    useSpecial: document.getElementById('special').checked
   };
 
   // Validate settings
@@ -35,11 +33,7 @@ document.getElementById('save').addEventListener('click', () => {
     return;
   }
 
-  if (settings.emailNotification && 
-      !settings.emailNotification.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-    alert('Please enter a valid email address or leave it empty');
-    return;
-  }
+
 
   // Save settings
   chrome.storage.sync.set({ passwordSettings: settings }, () => {

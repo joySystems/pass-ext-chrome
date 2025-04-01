@@ -15,7 +15,7 @@ function findConfirmationField(passwordField) {
 // Function to find email/login field
 function findEmailLoginField(form) {
   if (!form) return null;
-  
+ 
   const emailLoginSelectors = [
     'input[type="email"]',
     'input[name*="email"]',
@@ -86,6 +86,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         confirmField.dispatchEvent(new Event('input', { bubbles: true }));
       }
 
+      // Copy just the password to clipboard initially
+      copyToClipboard(request.password).then(success => {
+        if (success) {
+          showNotification('Пароль скопирован в буфер обмена');
+        }
+      });
+
       // Get domain and email/login information
       const domain = window.location.hostname;
       const form = passwordField.form;
@@ -99,16 +106,16 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         emailLogin ? `Login/Email: ${emailLogin}` : ''
       ].filter(Boolean).join('\n');
 
-      // Copy credential information to clipboard
-      copyToClipboard(credentialInfo).then(success => {
-        if (success) {
-          showNotification('Credentials copied to clipboard');
-        }
-      });
-
       // Listen for form submission
       if (form) {
         form.addEventListener('submit', () => {
+          // Copy full credential information to clipboard on form submission
+          copyToClipboard(credentialInfo).then(success => {
+            if (success) {
+              showNotification('Учетные данные скопированы в буфер обмена');
+            }
+          });
+
           chrome.runtime.sendMessage({
             action: 'formSubmitted',
             domain: domain,
@@ -116,6 +123,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           });
         });
       }
+      
     }
   } else if (request.action === 'showNotification') {
     showNotification(request.message);

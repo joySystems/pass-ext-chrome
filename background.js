@@ -4,8 +4,7 @@ let passwordSettings = {
   useUppercase: true,
   useLowercase: true,
   useNumbers: true,
-  useSpecial: true,
-  emailNotification: '',
+  useSpecial: true
 };
 
 // Load settings from storage
@@ -63,17 +62,5 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         message: 'Password has been copied to clipboard'
       });
     });
-  }
-});
-
-// Listen for successful form submission
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === 'formSubmitted' && passwordSettings.emailNotification) {
-    // Here you would implement the email notification logic
-    // Note: For security reasons, you should use a secure backend service
-    // to handle the actual email sending
-    console.log('Form submitted, would send email to:', passwordSettings.emailNotification);
-    console.log('Domain:', request.domain);
-    console.log('Password:', request.password);
   }
 });
