@@ -18,7 +18,7 @@ chrome.storage.sync.get('passwordSettings', (data) => {
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: 'generatePassword',
-    title: 'Generate Password',
+    title: chrome.i18n.getMessage('generatePassword'),
     contexts: ['editable']
   });
 });
@@ -59,7 +59,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     navigator.clipboard.writeText(password).then(() => {
       chrome.tabs.sendMessage(tab.id, {
         action: 'showNotification',
-        message: 'Password has been copied to clipboard'
+        message: chrome.i18n.getMessage('passwordCopied')
       });
     });
   }

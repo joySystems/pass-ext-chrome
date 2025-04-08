@@ -1,0 +1,62 @@
+{
+  "extName": {
+    "message": "Generador de Contraseñas Seguras",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Genera y auto-rellena contraseñas seguras con complejidad configurable",
+    "description": "Extension description"
+  },
+  "passwordLength": {
+    "message": "Longitud de la contraseña:",
+    "description": "Label for password length input"
+  },
+  "characterTypes": {
+    "message": "Tipos de caracteres:",
+    "description": "Label for character types section"
+  },
+  "uppercaseLetters": {
+    "message": "Letras mayúsculas (A-Z)",
+    "description": "Label for uppercase letters checkbox"
+  },
+  "lowercaseLetters": {
+    "message": "Letras minúsculas (a-z)",
+    "description": "Label for lowercase letters checkbox"
+  },
+  "numbers": {
+    "message": "Números (0-9)",
+    "description": "Label for numbers checkbox"
+  },
+  "specialCharacters": {
+    "message": "Caracteres especiales (!@#$%^&*)",
+    "description": "Label for special characters checkbox"
+  },
+  "saveSettings": {
+    "message": "Guardar configuración",
+    "description": "Text for save settings button"
+  },
+  "settingsSaved": {
+    "message": "¡Configuración guardada!",
+    "description": "Success message after saving settings"
+  },
+  "generatePassword": {
+    "message": "Generar contraseña",
+    "description": "Context menu item text"
+  },
+  "passwordCopied": {
+    "message": "La contraseña se ha copiado al portapapeles",
+    "description": "Notification message when password is copied"
+  },
+  "lengthError": {
+    "message": "La longitud de la contraseña debe estar entre 8 y 32 caracteres",
+    "description": "Error message for invalid password length"
+  },
+  "typeError": {
+    "message": "Por favor, seleccione al menos un tipo de carácter",
+    "description": "Error message when no character type is selected"
+  },
+  "language": {
+    "message": "Idioma:",
+    "description": "Label for language selection"
+  }
+}

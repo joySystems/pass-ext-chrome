@@ -1,0 +1,62 @@
+{
+  "extName": {
+    "message": "Générateur de Mots de Passe Sécurisés",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Générez et auto-remplissez des mots de passe sécurisés avec une complexité configurable",
+    "description": "Extension description"
+  },
+  "passwordLength": {
+    "message": "Longueur du mot de passe :",
+    "description": "Label for password length input"
+  },
+  "characterTypes": {
+    "message": "Types de caractères :",
+    "description": "Label for character types section"
+  },
+  "uppercaseLetters": {
+    "message": "Lettres majuscules (A-Z)",
+    "description": "Label for uppercase letters checkbox"
+  },
+  "lowercaseLetters": {
+    "message": "Lettres minuscules (a-z)",
+    "description": "Label for lowercase letters checkbox"
+  },
+  "numbers": {
+    "message": "Chiffres (0-9)",
+    "description": "Label for numbers checkbox"
+  },
+  "specialCharacters": {
+    "message": "Caractères spéciaux (!@#$%^&*)",
+    "description": "Label for special characters checkbox"
+  },
+  "saveSettings": {
+    "message": "Enregistrer les paramètres",
+    "description": "Text for save settings button"
+  },
+  "settingsSaved": {
+    "message": "Paramètres enregistrés !",
+    "description": "Success message after saving settings"
+  },
+  "generatePassword": {
+    "message": "Générer un mot de passe",
+    "description": "Context menu item text"
+  },
+  "passwordCopied": {
+    "message": "Le mot de passe a été copié dans le presse-papiers",
+    "description": "Notification message when password is copied"
+  },
+  "lengthError": {
+    "message": "La longueur du mot de passe doit être comprise entre 8 et 32 caractères",
+    "description": "Error message for invalid password length"
+  },
+  "typeError": {
+    "message": "Veuillez sélectionner au moins un type de caractère",
+    "description": "Error message when no character type is selected"
+  },
+  "language": {
+    "message": "Langue :",
+    "description": "Label for language selection"
+  }
+}

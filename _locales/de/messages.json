@@ -1,0 +1,62 @@
+{
+  "extName": {
+    "message": "Sicherer Passwort-Generator",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Generieren und automatisch ausfüllen von sicheren Passwörtern mit konfigurierbarer Komplexität",
+    "description": "Extension description"
+  },
+  "passwordLength": {
+    "message": "Passwortlänge:",
+    "description": "Label for password length input"
+  },
+  "characterTypes": {
+    "message": "Zeichentypen:",
+    "description": "Label for character types section"
+  },
+  "uppercaseLetters": {
+    "message": "Großbuchstaben (A-Z)",
+    "description": "Label for uppercase letters checkbox"
+  },
+  "lowercaseLetters": {
+    "message": "Kleinbuchstaben (a-z)",
+    "description": "Label for lowercase letters checkbox"
+  },
+  "numbers": {
+    "message": "Zahlen (0-9)",
+    "description": "Label for numbers checkbox"
+  },
+  "specialCharacters": {
+    "message": "Sonderzeichen (!@#$%^&*)",
+    "description": "Label for special characters checkbox"
+  },
+  "saveSettings": {
+    "message": "Einstellungen speichern",
+    "description": "Text for save settings button"
+  },
+  "settingsSaved": {
+    "message": "Einstellungen gespeichert!",
+    "description": "Success message after saving settings"
+  },
+  "generatePassword": {
+    "message": "Passwort generieren",
+    "description": "Context menu item text"
+  },
+  "passwordCopied": {
+    "message": "Passwort wurde in die Zwischenablage kopiert",
+    "description": "Notification message when password is copied"
+  },
+  "lengthError": {
+    "message": "Die Passwortlänge muss zwischen 8 und 32 Zeichen liegen",
+    "description": "Error message for invalid password length"
+  },
+  "typeError": {
+    "message": "Bitte wählen Sie mindestens einen Zeichentyp aus",
+    "description": "Error message when no character type is selected"
+  },
+  "language": {
+    "message": "Sprache:",
+    "description": "Label for language selection"
+  }
+}

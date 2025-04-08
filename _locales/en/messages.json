@@ -1,0 +1,62 @@
+{
+  "extName": {
+    "message": "Secure Password Generator",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Generate and auto-fill secure passwords with configurable complexity",
+    "description": "Extension description"
+  },
+  "passwordLength": {
+    "message": "Password Length:",
+    "description": "Label for password length input"
+  },
+  "characterTypes": {
+    "message": "Character Types:",
+    "description": "Label for character types section"
+  },
+  "uppercaseLetters": {
+    "message": "Uppercase Letters (A-Z)",
+    "description": "Label for uppercase letters checkbox"
+  },
+  "lowercaseLetters": {
+    "message": "Lowercase Letters (a-z)",
+    "description": "Label for lowercase letters checkbox"
+  },
+  "numbers": {
+    "message": "Numbers (0-9)",
+    "description": "Label for numbers checkbox"
+  },
+  "specialCharacters": {
+    "message": "Special Characters (!@#$%^&*)",
+    "description": "Label for special characters checkbox"
+  },
+  "saveSettings": {
+    "message": "Save Settings",
+    "description": "Text for save settings button"
+  },
+  "settingsSaved": {
+    "message": "Settings saved!",
+    "description": "Success message after saving settings"
+  },
+  "generatePassword": {
+    "message": "Generate Password",
+    "description": "Context menu item text"
+  },
+  "passwordCopied": {
+    "message": "Password has been copied to clipboard",
+    "description": "Notification message when password is copied"
+  },
+  "lengthError": {
+    "message": "Password length must be between 8 and 32 characters",
+    "description": "Error message for invalid password length"
+  },
+  "typeError": {
+    "message": "Please select at least one character type",
+    "description": "Error message when no character type is selected"
+  },
+  "language": {
+    "message": "Language:",
+    "description": "Label for language selection"
+  }
+}

@@ -78,31 +78,43 @@
 </head>
 <body>
   <div class="setting-group">
-    <label>Password Length:</label>
+    <label id="languageLabel"></label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="ru">Русский</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="pt">Português</option>
+    </select>
+  </div>
+
+  <div class="setting-group">
+    <label id="passwordLengthLabel"></label>
     <input type="number" id="length" min="8" max="32" value="12">
   </div>
 
   <div class="setting-group">
-    <label>Character Types:</label>
+    <label id="characterTypesLabel"></label>
     <div class="checkbox-group">
       <input type="checkbox" id="uppercase" checked>
-      <label for="uppercase">Uppercase Letters (A-Z)</label>
+      <label for="uppercase" id="uppercaseLabel"></label>
     </div>
     <div class="checkbox-group">
       <input type="checkbox" id="lowercase" checked>
-      <label for="lowercase">Lowercase Letters (a-z)</label>
+      <label for="lowercase" id="lowercaseLabel"></label>
     </div>
     <div class="checkbox-group">
       <input type="checkbox" id="numbers" checked>
-      <label for="numbers">Numbers (0-9)</label>
+      <label for="numbers" id="numbersLabel"></label>
     </div>
     <div class="checkbox-group">
       <input type="checkbox" id="special" checked>
-      <label for="special">Special Characters (!@#$%^&*)</label>
+      <label for="special" id="specialLabel"></label>
     </div>
   </div>
 
-  <button id="save">Save Settings</button>
+  <button id="save"></button>
 
   <script src="popup.js"></script>
 </body>

@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Secure Password Generator",
+  "name": "__MSG_extName__",
   "version": "1.0",
-  "description": "Generate and auto-fill secure passwords with configurable complexity",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
   "permissions": [
     "contextMenus",
     "clipboardWrite",

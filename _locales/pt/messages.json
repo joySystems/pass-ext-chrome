@@ -1,0 +1,62 @@
+{
+  "extName": {
+    "message": "Gerador de Senhas Seguras",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Gere e preencha automaticamente senhas seguras com complexidade configurável",
+    "description": "Extension description"
+  },
+  "passwordLength": {
+    "message": "Comprimento da senha:",
+    "description": "Label for password length input"
+  },
+  "characterTypes": {
+    "message": "Tipos de caracteres:",
+    "description": "Label for character types section"
+  },
+  "uppercaseLetters": {
+    "message": "Letras maiúsculas (A-Z)",
+    "description": "Label for uppercase letters checkbox"
+  },
+  "lowercaseLetters": {
+    "message": "Letras minúsculas (a-z)",
+    "description": "Label for lowercase letters checkbox"
+  },
+  "numbers": {
+    "message": "Números (0-9)",
+    "description": "Label for numbers checkbox"
+  },
+  "specialCharacters": {
+    "message": "Caracteres especiais (!@#$%^&*)",
+    "description": "Label for special characters checkbox"
+  },
+  "saveSettings": {
+    "message": "Salvar configurações",
+    "description": "Text for save settings button"
+  },
+  "settingsSaved": {
+    "message": "Configurações salvas!",
+    "description": "Success message after saving settings"
+  },
+  "generatePassword": {
+    "message": "Gerar senha",
+    "description": "Context menu item text"
+  },
+  "passwordCopied": {
+    "message": "A senha foi copiada para a área de transferência",
+    "description": "Notification message when password is copied"
+  },
+  "lengthError": {
+    "message": "O comprimento da senha deve ter entre 8 e 32 caracteres",
+    "description": "Error message for invalid password length"
+  },
+  "typeError": {
+    "message": "Por favor, selecione pelo menos um tipo de caractere",
+    "description": "Error message when no character type is selected"
+  },
+  "language": {
+    "message": "Idioma:",
+    "description": "Label for language selection"
+  }
+}
